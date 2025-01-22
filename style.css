@@ -1,0 +1,215 @@
+html {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: table-row;
+  background: #000 radial-gradient(1000px 500px, #3f546b, #000);
+}
+
+.game-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.game-content {
+  display: inline-block;
+  width: 668px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.difficulty-panel {
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.difficulty-panel h1 {
+  text-align: center; 
+  width: 100%; 
+}
+
+
+.difficulty-options {
+  clear: both;
+  overflow: hidden;
+  margin: 20px -7px 0;
+}
+
+.difficulty-options div {
+  float: left;
+  width: 20%;
+}
+
+.difficulty-options input {
+  display: none;
+}
+
+.difficulty-options input:checked+label {
+  color: #fff;
+  background-color: #593f6b;
+  border-color: #fff;
+  cursor: default;
+}
+
+.difficulty-options label {
+  display: block;
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  background-color: #666;
+  border: solid 2px #ccc;
+  border-radius: 8px;
+  color: #999;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.start-game {
+  margin-top: 20px;
+}
+
+.start-game button {
+  display: block;
+  width: 100%;
+  padding: 2px 12px 4px;
+  font-family: inherit;
+  font-size: 24px;
+  border: solid 2px #ccc;
+  border-radius: 8px;
+  background-color: #593f6b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.start-game button:focus {
+  outline: none;
+}
+
+.info-panel div {
+  margin-top: 10px;
+}
+
+.game-board {
+  position: relative;
+  width: 428px;
+  height: 428px;
+  margin: 20px auto; 
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/77020/board.png");
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.highlighted-columns,
+.highlighted-cells,
+.game-chips,
+.clickable-columns {
+  position: absolute;
+  width: 428px;
+  height: 428px;
+}
+
+.highlighted-columns div {
+  float: left;
+  width: 60px;
+  height: 426px;
+  margin: 1px 0 1px 1px;
+  transition: background-color 0.1s;
+}
+
+.highlighted-columns .lit {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.1s;
+}
+
+.highlighted-cells div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.game-chips div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.game-chips .player1 {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/77020/p1-chip.png");
+}
+
+.game-chips .player2 {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/77020/p2-chip.png");
+}
+
+.game-chips .cursor {
+  bottom: 428px;
+  transition: left 0.1s ease-out;
+}
+
+.game-chips .dropped {
+  transition: bottom ease-in;
+  animation: bounce 0.3s;
+}
+
+.clickable-columns div {
+  float: left;
+  width: 61px;
+  height: 428px;
+}
+
+.clickable-columns div:first-child {
+  padding-left: 1px;
+}
+
+.clickable-columns div.hover {
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+  }
+  30% {
+      animation-timing-function: ease-in;
+      transform: translateY(-40px);
+  }
+  60% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+  }
+  80% {
+      animation-timing-function: ease-in;
+      transform: translateY(-10px);
+  }
+  100% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+  }
+}
+
+.difficulty-panel.small {
+  position: absolute;
+  top: 10px; 
+  left: 10px; 
+  width: 150px; 
+  padding: 5px; 
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease; /
+}
+
+.info-panel {
+  margin-bottom: 20px;
+  color: white; 
+  text-align: center;
+}

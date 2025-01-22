@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Connect 4 Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Doppio+One" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-content">
+      <div class="info-panel">
+        <h2></h2>
+        <div class="info-blurb"></div>
+        <div class="game-outlook"></div>
+      </div>
+      <div class="difficulty-panel">
+        <h1>Connect 4</h1>
+        <h2>Game Difficulty</h2>
+        <div class="difficulty-options">
+          <div>
+            <input id="level1" type="radio" name="difficulty" value="1">
+            <label for="level1">1</label>
+          </div>
+          <div>
+            <input id="level2" type="radio" name="difficulty" value="2">
+            <label for="level2">2</label>
+          </div>
+          <div>
+            <input id="level3" type="radio" name="difficulty" value="3" checked>
+            <label for="level3">3</label>
+          </div>
+        </div>
+        <div class="start-game">
+          <button>Begin Game</button>
+        </div>
+      </div>
+      <div class="game-board" style="display: none;">
+        <div class="highlighted-columns">
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="highlighted-cells"></div>
+        <div class="game-chips"></div>
+        <div class="clickable-columns">
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
